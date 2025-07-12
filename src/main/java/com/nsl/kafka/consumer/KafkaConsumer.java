@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 @Log4j2
 public class KafkaConsumer {
 
+    //@KafkaListener to listen the kafka messages
     @KafkaListener(topics = "${app.kafka.topic.topic-A}", groupId = "group_id")
     public void consumeMessageTopicA(String message) throws JsonProcessingException {
         try {
