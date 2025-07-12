@@ -41,4 +41,8 @@ public class KafkaController {
         return "Message sent to Kafka topic-B";
     }
 
+    public ResponseEntity<String> welcome(@RequestBody String reqJson) {
+        return ResponseEntity.ok().body(new JSONObject().put("code", "200").put("message", "Kafka Server is up!").toString());
+    }
+
 }
