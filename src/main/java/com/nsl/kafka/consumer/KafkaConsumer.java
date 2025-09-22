@@ -27,4 +27,5 @@ public class KafkaConsumer {
     public void consumeMessageTopicB(String message) throws JsonProcessingException {
         log.info("Received message ::: {} ", message);
     }
+
 }

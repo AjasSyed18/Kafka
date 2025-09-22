@@ -38,6 +38,6 @@ public class KafkaProducer {
                 .setHeader(KafkaHeaders.TOPIC, topic)
                 .build();
         kafkaTemplate.send(topic, message);
-        log.info("Message sent successfully to Topic-A!!!");
+        log.info("Message sent successfully to Topic-B!!!");
     }
 }
