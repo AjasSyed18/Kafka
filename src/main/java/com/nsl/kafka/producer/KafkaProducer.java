@@ -24,20 +24,20 @@ public class KafkaProducer {
     }*/
 
     public void sendMessageToTopicA(String topic, String message) {
-        Message<String> Msg = MessageBuilder
+        /*Message<String> msg = MessageBuilder
                 .withPayload(message)
                 .setHeader(KafkaHeaders.TOPIC, topic)
-                .build();
+                .build();*/
         kafkaTemplate.send(topic, message);
         log.info("Message sent successfully to Topic-A!!!");
     }
 
     public void sendMessageToTopicB(String topic, String message) {
-        Message<String> build = MessageBuilder
+        /*Message<String> build = MessageBuilder
                 .withPayload(message)
                 .setHeader(KafkaHeaders.TOPIC, topic)
-                .build();
+                .build();*/
         kafkaTemplate.send(topic, message);
-        log.info("Message sent successfully to Topic-A!!!");
+        log.info("Message sent successfully to Topic-B!!!");
     }
 }
