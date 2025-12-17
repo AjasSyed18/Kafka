@@ -20,8 +20,12 @@ public class KafkaController {
     @Value("${app.kafka.topic.topic-B}")
     private String topicB;
 
-    @Autowired
-    private KafkaProducer kafkaProducer;
+    private final KafkaProducer kafkaProducer;
+
+    @autowired
+    public KafkaController(KafkaProducer kafkaProducer){
+        this.kafkaProducer = kafkaProducer
+    }
 
     //controller to send fasUpgrade request
     @PostMapping("/publishKafkaTopicA")
