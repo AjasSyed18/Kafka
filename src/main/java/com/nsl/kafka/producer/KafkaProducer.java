@@ -19,10 +19,6 @@ public class KafkaProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    /*public void sendMessage(String topic, String message) {
-        kafkaTemplate.send(topic, message);
-    }*/
-
     public void sendMessageToTopicA(String topic, String message) {
         /*Message<String> msg = MessageBuilder
                 .withPayload(message)
